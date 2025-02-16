@@ -1,0 +1,1 @@
+scoreboard players set #require playerList 0

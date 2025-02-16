@@ -1,0 +1,1 @@
+execute if score list playerList < require playerList run function common:components/win/no_player

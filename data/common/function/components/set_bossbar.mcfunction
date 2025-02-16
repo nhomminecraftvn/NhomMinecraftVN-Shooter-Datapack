@@ -1,0 +1,1 @@
+bossbar set common:main players @a

@@ -1,0 +1,10 @@
+execute unless score ingame game_stats matches 0 run scoreboard players add #tick timer.storage 1
+
+execute if score #tick timer.storage = #tick time_const run function common:main__function/timer/tick/second
+execute if score second timer.storage = #value time_const run function common:main__function/timer/tick/minute
+execute if score minute timer.storage = #value time_const run function common:main__function/timer/tick/hour
+
+execute unless score ingame game_stats matches 0 if score minute timer.storage < dec time_const if score second timer.storage < dec time_const run title @a actionbar ["§bIn-game Time: ",{"score": {"name": "hour","objective": "timer.storage"}},":0",{"score": {"name": "minute","objective": "timer.storage"}},":0",{"score": {"name": "second","objective": "timer.storage"}}]
+execute unless score ingame game_stats matches 0 if score minute timer.storage < dec time_const if score second timer.storage >= dec time_const run title @a actionbar ["§bIn-game Time: ",{"score": {"name": "hour","objective": "timer.storage"}},":0",{"score": {"name": "minute","objective": "timer.storage"}},":",{"score": {"name": "second","objective": "timer.storage"}}]
+execute unless score ingame game_stats matches 0 if score minute timer.storage >= dec time_const if score second timer.storage < dec time_const run title @a actionbar ["§bIn-game Time: ",{"score": {"name": "hour","objective": "timer.storage"}},":",{"score": {"name": "minute","objective": "timer.storage"}},":0",{"score": {"name": "second","objective": "timer.storage"}}]
+execute unless score ingame game_stats matches 0 if score minute timer.storage >= dec time_const if score second timer.storage >= dec time_const run title @a actionbar ["§bIn-game Time: ",{"score": {"name": "hour","objective": "timer.storage"}},":",{"score": {"name": "minute","objective": "timer.storage"}},":",{"score": {"name": "second","objective": "timer.storage"}}]

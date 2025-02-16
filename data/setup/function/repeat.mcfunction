@@ -1,0 +1,1 @@
+execute as @a if score #enable setupMode matches 1 run function setup:item

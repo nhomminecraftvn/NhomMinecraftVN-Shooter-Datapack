@@ -1,0 +1,16 @@
+team modify red color red
+team modify green color green
+team modify blue color aqua
+team modify yellow color yellow
+team modify red friendlyFire false
+team modify green friendlyFire false
+team modify blue friendlyFire false
+team modify yellow friendlyFire false
+team modify red collisionRule pushOtherTeams
+team modify green collisionRule pushOtherTeams
+team modify blue collisionRule pushOtherTeams
+team modify yellow collisionRule pushOtherTeams
+team modify red nametagVisibility hideForOtherTeams
+team modify green nametagVisibility hideForOtherTeams
+team modify blue nametagVisibility hideForOtherTeams
+team modify yellow nametagVisibility hideForOtherTeams
